@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musanze Digital Service Desk</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark">M</div>
+    <h1>Musanze Digital Service Desk</h1>
+    <span>INES-Ruhengeri</span>
+  </header>
+
+  <div class="wrapper">
+
+//UMURERWA ALLIANCE -------REG NO 2530681//
+    <div class="card">
+      <div class="card-title">New Service Record</div>
+
+      <form id="service-form" autocomplete="off">
+        <div class="form-grid">
+
+          <div class="form-group full">
+            <label for="client">Client Name</label>
+            <input type="text" id="client" name="client"
+                   placeholder="e.g. Clement" required />
+          </div>
+
+          <div class="form-group full">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="">— Select service —</option>
+              <option value="INES">INES</option>
+              <option value="Event Ticket">Event Ticket</option>
+              <option value="Order">Order</option>
+              <option value="Booking">Booking</option>
+              <option value="Ticket">Ticket</option>
+              <option value="Consultation">Consultation</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity"
+                   min="1" placeholder="e.g. 5" required />
+          </div>
+
+          <div class="form-group">
+            <label for="unit_price">Unit Price (RWF)</label>
+            <input type="number" id="unit_price" name="unit_price"
+                   min="0" step="0.01" placeholder="e.g. 1500" required />
+          </div>
+
+          <div class="form-group full">
+            <label>Live Total</label>
+            <div class="total-display" id="live_total">Total 0 RWF</div>
+          </div>
+
+        </div>
+
+        <div id="msg"></div>
+        <button type="submit" id="save-btn" class="btn-save">Save Record</button>
+      </form>
+    </div>
+
+    
+    <div class="card">
+      <div class="card-title">Saved Records</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Service</th>
+              <th>Total (RWF)</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="records-body">
+            <tr><td colspan="4" class="no-records">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
