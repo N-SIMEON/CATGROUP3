@@ -1,18 +1,13 @@
+//Gafar mouatsm babikir role:connectdb and php reg:2528635//
 <?php
-// NAME DUSHIMIMANA SALME | REG NO 2528419
-// Database Configuration
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "musanze_mvc";
 
-define('DB_HOST', 'sql111.byetcluster.com');   
-define('DB_USER', 'if0_41298433');              
-define('DB_PASS', 'YOUR_PASSWORD_HERE');        
-define('DB_NAME', 'if0_41298433_order');       
+$conn = new mysqli($host, $user, $pass, $dbname);
 
-function getConnection() {
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    $conn->set_charset("utf8mb4");
-    return $conn;
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>

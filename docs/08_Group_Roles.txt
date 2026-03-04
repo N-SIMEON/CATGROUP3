@@ -1,0 +1,27 @@
+# Group Roles (7 Members)
+
+Member 1 – Project Leader
+- Repository management
+- Final integration
+
+Member 2 – Database Developer
+- schema.sql
+- db.php
+
+Member 3 – Model Developer
+- Service.php
+
+Member 4 – Controller Developer
+- ServiceController.php
+
+Member 5 – View Developer
+- create.php
+- index.php UI
+
+Member 6 – Frontend Developer
+- style.css
+- app.js
+
+Member 7 – Documentation Specialist
+- All docs folder content
+- Testing report
